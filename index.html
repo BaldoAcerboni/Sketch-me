@@ -9,6 +9,21 @@
 </head>
 <body>
     <div id="container">
+        <div class="side-options">
+            <div class="side" id="range">
+                <label id="range-label" for="square-nr"></label>
+                <input type="range" min="5" max="100" id="square-nr" value="50">
+            </div>
+            <div id="selectors">
+                <div class="side selector active" id="black">black</div>
+                <div class="side selector" id="random">random</div>
+                <div class="side selector" id="darker">darker</div>
+                <div class="side selector" id="choose">choose color</div>
+                <div class="side selector" id="eraser">eraser</div>
+            </div>
+        </div>
+        
+        
         <div id="canvas"></div>
     </div>
 </body>
