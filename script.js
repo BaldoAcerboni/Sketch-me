@@ -34,16 +34,6 @@ function changeRange() {
     }
 }
 
-function paint() {
-    //need to put event listener(square) here, otherwise it would stop working 
-    //after range modification
-    
-    //the event listener below is only here not to make the one above feel lonely
-    //since paint() is called in changeRange() which is called in the global scope
-    //or when range is changed, I don't see a reason to put it outside
-    
-}
-
 //input[type='color'].value always returns hex value, for whatever reason
 //element.style.backgroundColor always returns rgb values, because of course it does
 //(on chrome at least, did not test on other browsers)
@@ -95,6 +85,8 @@ function activate(e) {
     });
     if (e.target.classList.contains('selector')) {
         e.target.classList.add('active');
+    } else if(e.target.parentNode.classList.contains('selector')) {
+        e.target.parentNode.classList.add('active')
     }
 }
 function clearCanvas() {
